@@ -21,8 +21,9 @@
   "scripts": {
     "lint": "eslint \"{src,__tests__}/**/*.{ts,tsx}\"",
     "format": "prettier --check --write \"{src,__tests__}/**/*.{ts,tsx}\"",
+    "precommit": "npm run format && npm run lint && npm run test && npm run build",
+    "commit": "scripts/git.sh",
     "start": "react-scripts start",
-    "prebuild": "npm run format && npm run lint",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
