@@ -3,8 +3,9 @@ import thunk from 'redux-thunk';
 import rootReducer, { RootState } from './reducers/root';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-const initialState = {
+const initialState: RootState = {
     spotify: {},
+    input: '',
 } as const;
 
 const middlewares = [thunk];
