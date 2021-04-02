@@ -1,0 +1,32 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    justify-content: flex-start;
+    font-size: $medium;
+    & svg {
+        transform: scale(0.4);
+    }
+    overflow: hidden;
+}
+
+.icon {
+    @include center-child;
+    width: 56px;
+    height: 40px;
+}
+
+.cursor {
+    background-color: $spotify-green;
+    width: 5px;
+    height: 40px;
+}
+
+.active {
+    color: $white;
+}
+
+.passive {
+    color: $white;
+    opacity: $opacity;
+}

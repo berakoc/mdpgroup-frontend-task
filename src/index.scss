@@ -1,3 +1,10 @@
+@import './styles/index';
+
+* {
+  box-sizing: border-box;
+  color: $white;
+}
+
 body {
   margin: 0;
   font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +14,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.null {}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import Playlists from '../api/models/Playlists';
+import { Navigation, SearchBar } from '../components/components';
 import { fetchPlaylists } from '../redux/actions/spotify';
 import { SpotifyAction } from '../redux/actions/types';
 import { RootState } from '../redux/reducers/root';
@@ -29,8 +30,12 @@ const App: React.FC<Props> = (props) => {
     useEffect(() => {
         fetchPlaylists();
     }, [fetchPlaylists]);
-    console.log(props.spotify.recentlyPlayed);
-    return <div className={combine(styles, 'component')}>App</div>;
+    return (
+        <div className={combine(styles, 'component')}>
+            <Navigation />
+            <SearchBar />
+        </div>
+    );
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

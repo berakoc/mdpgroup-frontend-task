@@ -1,0 +1,23 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    justify-content: space-between;
+}
+
+.text {
+    opacity: $opacity;
+    font-size: $small;
+}
+
+.bar {
+    opacity: $lower-opacity;
+    width: 40vw;
+    height: 6px;
+    border-radius: 99px;
+    background-color: white;
+    margin: 0 16px;
+    @media screen and (max-width: $tablet) {
+        width: 28vw;
+    }
+}

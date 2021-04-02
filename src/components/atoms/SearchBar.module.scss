@@ -1,0 +1,25 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    display: inline-flex;
+    border-radius: 99px;
+    height: 40px;
+    padding: 0 4px 0 0px;
+    background: rgba($color: $white, $alpha: $lowest-opacity);
+}
+
+.icon {
+    @include center-child;
+    width: 41px;
+}
+
+.icon > svg {
+    transform: scale(0.4);
+}
+
+.input {
+    width: 80px;
+    background-color: transparent;
+    border: none;
+}

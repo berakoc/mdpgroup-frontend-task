@@ -1,0 +1,11 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    justify-content: space-between;
+    flex-direction: column;
+
+    & > *:last-child {
+        margin: 8px 0;
+    }
+}

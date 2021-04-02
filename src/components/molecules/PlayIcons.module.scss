@@ -1,0 +1,13 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    justify-content: space-between;
+    width: 120px;
+
+    & svg {
+        width: 12.7px;
+        height: 12.35px;
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    background-color: $space-grey-light;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    padding: $padding;
+    justify-content: space-between;
+    width: 100vw;
+
+    & > *:nth-child(2) {
+        justify-self:first baseline;
+    }
+
+    & > div:last-child {
+        width: 188.828px;
+    }
+}
