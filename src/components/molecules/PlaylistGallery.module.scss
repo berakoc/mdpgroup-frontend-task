@@ -6,6 +6,7 @@
 
 .gallery {
     @include center-child;
+    justify-content: flex-start;
     & > div {
         margin-right: 12px;
     }

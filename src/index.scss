@@ -26,6 +26,10 @@ body {
   background-color: rgba($color: $white, $alpha: $lower-opacity);
 }
 
+input::placeholder {
+  color: rgba($color: $white, $alpha: $low-opacity);
+}
+
 textarea:focus, input:focus{
   outline: none;
 }
