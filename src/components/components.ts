@@ -8,8 +8,10 @@ import SpotifyLogo from './atoms/SpotifyLogo';
 import PlaylistMenu from './atoms/PlaylistMenu';
 import Navigation from './molecules/Navigation';
 import PlayIcons from './molecules/PlayIcons';
+import PlaylistWidget from './molecules/PlaylistWidget';
 import PlayWidget from './organisms/PlayWidget';
 import Player from './organisms/Player';
+import Playlist from './organisms/Playlist';
 
 export {
     Spacer,
@@ -22,6 +24,8 @@ export {
     PlaylistMenu,
     Navigation,
     PlayIcons,
+    PlaylistWidget,
     PlayWidget,
     Player,
+    Playlist,
 };
