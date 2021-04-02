@@ -1,0 +1,10 @@
+@import '../../styles/index';
+
+.component {
+    padding: 24px 0 24px 28px;
+
+    & svg {
+        width: 146px;
+        height: 43px;
+    }
+}

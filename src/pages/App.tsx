@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import Playlists from '../api/models/Playlists';
-import { Navigation, SearchBar } from '../components/components';
+import { Navigation, SearchBar, SpotifyLogo } from '../components/components';
 import { fetchPlaylists } from '../redux/actions/spotify';
 import { SpotifyAction } from '../redux/actions/types';
 import { RootState } from '../redux/reducers/root';
@@ -32,6 +32,7 @@ const App: React.FC<Props> = (props) => {
     }, [fetchPlaylists]);
     return (
         <div className={combine(styles, 'component')}>
+            <SpotifyLogo />
             <Navigation />
             <SearchBar />
         </div>

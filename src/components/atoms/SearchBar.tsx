@@ -1,7 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import Icons from '../../icons/icon-factory';
 import { combine } from '../../utils/style';
-import { EmptyProps } from '../../utils/types';
 import styles from './SearchBar.module.scss';
 
 interface Props {

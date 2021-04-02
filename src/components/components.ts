@@ -3,6 +3,7 @@ import SongDescriptor from './atoms/SongDescriptor';
 import PlayButton from './atoms/PlayButton';
 import Duration from './atoms/Duration';
 import SearchBar from './atoms/SearchBar';
+import SpotifyLogo from './atoms/SpotifyLogo';
 import Navigation from './molecules/Navigation';
 import PlayIcons from './molecules/PlayIcons';
 import PlayWidget from './organisms/PlayWidget';
@@ -14,6 +15,7 @@ export {
     PlayButton,
     Duration,
     SearchBar,
+    SpotifyLogo,
     Navigation,
     PlayIcons,
     PlayWidget,
