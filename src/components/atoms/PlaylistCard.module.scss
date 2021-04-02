@@ -1,13 +1,21 @@
 @import '../../styles/index';
 
 .component {
+    background-color: rgba($color: $white, $alpha: 0.08);
     border-radius: 10px;
-    display: inline-block;
-    padding: 10px;
+    max-width: 199px;
+    height: 280px;
+    padding: 14px;
 }
 
 .image {
+    width: 171px;
+    height: 171px;
     margin-bottom: 12px;
+
+    & img {
+        width: 100%;
+    }
 }
 
 .title {
@@ -17,4 +25,10 @@
 
 .description {
     color: rgba($color: $white, $alpha: $low-opacity);
+    font-size: small;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

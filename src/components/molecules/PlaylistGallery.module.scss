@@ -1,0 +1,21 @@
+@import '../../styles/index';
+
+.component {
+    visibility: visible;
+}
+
+.gallery {
+    @include center-child;
+    & > div {
+        margin-right: 12px;
+    }
+}
+
+.title {
+    font-size: $large;
+    font-weight: $bold;
+}
+
+.description {
+    color: rgba($color: $white, $alpha: $low-opacity);
+}

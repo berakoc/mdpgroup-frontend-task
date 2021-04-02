@@ -12,6 +12,7 @@ import Navigation from './molecules/Navigation';
 import PlayIcons from './molecules/PlayIcons';
 import PlaylistWidget from './molecules/PlaylistWidget';
 import TopBar from './molecules/TopBar';
+import PlaylistGallery from './molecules/PlaylistGallery';
 import PlayWidget from './organisms/PlayWidget';
 import Player from './organisms/Player';
 import Playlist from './organisms/Playlist';
@@ -32,6 +33,7 @@ export {
     PlayIcons,
     PlaylistWidget,
     TopBar,
+    PlaylistGallery,
     PlayWidget,
     Player,
     Playlist,
