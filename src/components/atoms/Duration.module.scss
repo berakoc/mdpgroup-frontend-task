@@ -17,7 +17,7 @@
     border-radius: 99px;
     background-color: white;
     margin: 0 16px;
-    @media screen and (max-width: $tablet) {
+    @include tablet {
         width: 28vw;
     }
 }
