@@ -7,6 +7,7 @@ import SearchBar from './atoms/SearchBar';
 import SpotifyLogo from './atoms/SpotifyLogo';
 import PlaylistMenu from './atoms/PlaylistMenu';
 import Profile from './atoms/Profile';
+import PlaylistCard from './atoms/PlaylistCard';
 import Navigation from './molecules/Navigation';
 import PlayIcons from './molecules/PlayIcons';
 import PlaylistWidget from './molecules/PlaylistWidget';
@@ -26,6 +27,7 @@ export {
     SpotifyLogo,
     PlaylistMenu,
     Profile,
+    PlaylistCard,
     Navigation,
     PlayIcons,
     PlaylistWidget,
