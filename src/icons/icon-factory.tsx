@@ -54,9 +54,9 @@ const Icons = {
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
                 <path
-                    d='M22.9319 38L0.683594 19L22.9319 0L24.3164 1.61883L3.96386 19L24.3164 36.3812'
                     fill={color}
                     opacity={opacity}
+                    d='M22.9319 38L0.683594 19L22.9319 0L24.3164 1.61883L3.96386 19L24.3164 36.3812'
                 />
             </svg>
         );
@@ -64,13 +64,13 @@ const Icons = {
     CHEVRON_RIGHT(opacity = defaultOpacity, color = white) {
         return (
             <svg
-                width='41'
-                height='40'
-                viewBox='0 0 41 40'
+                width='25'
+                height='38'
+                viewBox='0 0 25 38'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
                 <path
-                    d='M10.0681 39L8.68359 37.3812L29.0362 20L8.68359 2.61883L10.0681 1L32.3164 20'
+                    d='M2.06812 38L0.683594 36.3812L21.0362 19L0.683594 1.61883L2.06812 0L24.3164 19'
                     fill={color}
                     opacity={opacity}
                 />

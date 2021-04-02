@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
-import { Playlist, Profile } from '../components/components';
+import { Body, Playlist } from '../components/components';
 import { fetchPlaylists } from '../redux/actions/spotify';
 import { SpotifyAction } from '../redux/actions/types';
 import { RootState } from '../redux/reducers/root';
@@ -26,7 +26,7 @@ const App: React.FC<Props> = (props) => {
     return (
         <div className={combine(styles, 'component')}>
             <Playlist />
-            <Profile />
+            <Body />
         </div>
     );
 };

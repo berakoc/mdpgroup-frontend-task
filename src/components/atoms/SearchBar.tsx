@@ -7,7 +7,7 @@ interface Props {
     general?: boolean;
 }
 
-const SearchBar: React.FC<Props> = () => {
+const SearchBar: React.FC<Props> = (props) => {
     const [text, setText] = useState('');
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const text = e.target.value;
@@ -17,12 +17,18 @@ const SearchBar: React.FC<Props> = () => {
         <div className={combine(styles, 'component')}>
             <span className={combine(styles, 'icon')}>{Icons.SEARCH()}</span>
             <input
-                className={combine(styles, 'input')}
+                className={combine(
+                    styles,
+                    'input',
+                    props.general ? 'enhanced' : ':visible'
+                )}
                 onChange={handleChange}
                 value={text}
                 placeholder={'Ara'}
             />
-            <span className={combine(styles, 'icon')}>{Icons.FILTER()}</span>
+            <span className={combine(styles, props.general ? ':null' : 'icon')}>
+                {Icons.FILTER()}
+            </span>
         </div>
     );
 };

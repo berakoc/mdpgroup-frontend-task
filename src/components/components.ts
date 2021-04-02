@@ -10,9 +10,11 @@ import Profile from './atoms/Profile';
 import Navigation from './molecules/Navigation';
 import PlayIcons from './molecules/PlayIcons';
 import PlaylistWidget from './molecules/PlaylistWidget';
+import TopBar from './molecules/TopBar';
 import PlayWidget from './organisms/PlayWidget';
 import Player from './organisms/Player';
 import Playlist from './organisms/Playlist';
+import Body from './organisms/Body';
 
 export {
     Spacer,
@@ -27,7 +29,9 @@ export {
     Navigation,
     PlayIcons,
     PlaylistWidget,
+    TopBar,
     PlayWidget,
     Player,
     Playlist,
+    Body,
 };

@@ -1,0 +1,36 @@
+@import '../../styles/index';
+
+.component {
+    @include center-child;
+    justify-content: space-between;
+
+    & > div:first-child {
+        @include center-child;
+    }
+}
+
+.icon {
+    @include center-child;
+    width: 32px;
+    height: 32px;
+    border-radius: 99px;
+    background-color: $space-grey;
+    margin-right: 8px;
+
+    & svg {
+        position: relative;
+        transform: scale(0.4);
+    }
+}
+
+.left > svg {
+    right: 1px;
+}
+
+.right {
+    margin-right: 36px;
+}
+
+.right > svg {
+    left: 1px;
+}

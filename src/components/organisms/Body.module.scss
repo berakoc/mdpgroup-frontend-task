@@ -1,0 +1,8 @@
+@import '../../styles/index';
+
+.component {
+    flex: 1;
+    background: $gradient;
+    height: calc(100vh - 95px);
+    padding: 32px;
+}
