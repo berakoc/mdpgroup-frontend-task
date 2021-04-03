@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import Icons from '../../icons/icon-factory';
 import { setInput } from '../../redux/actions/input';
 import { InputAction } from '../../redux/actions/types';
+import { is, isNot } from '../../utils/object';
 import { combine } from '../../utils/style';
 import styles from './SearchBar.module.scss';
 
@@ -24,16 +25,18 @@ interface Props {
 
 const SearchBar: React.FC<Props> = (props) => {
     const [text, setText] = useState('');
+    const [isEmpty, setEmpty] = useState(false);
     const debouncedUpdateInput = useRef(
         debounce((text: string) => {
+            console.log(text);
             props.updateInput(text);
         }, 1000)
     );
     useEffect(() => {
-        if (text) {
+        if (text || isEmpty) {
             debouncedUpdateInput.current(text);
         }
-    }, [text]);
+    }, [text, isEmpty]);
     return (
         <div className={combine(styles, 'component')}>
             <span className={combine(styles, 'icon')}>{Icons.SEARCH()}</span>
@@ -43,9 +46,12 @@ const SearchBar: React.FC<Props> = (props) => {
                     'input',
                     props.general ? 'enhanced' : ':visible'
                 )}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    setText(e.target.value)
-                }
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                    const text = e.target.value;
+                    if (is(text.length, 0)) setEmpty(true);
+                    else if (isNot(text.length, 0) && isEmpty) setEmpty(false);
+                    setText(text);
+                }}
                 value={text}
                 placeholder={'Ara'}
             />
