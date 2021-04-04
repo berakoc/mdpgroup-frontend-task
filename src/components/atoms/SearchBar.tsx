@@ -29,7 +29,7 @@ const SearchBar: React.FC<Props> = (props) => {
     const debouncedUpdateInput = useRef(
         debounce((text: string) => {
             props.updateInput(text);
-        }, 1000)
+        }, 250)
     );
     useEffect(() => {
         if (text || isEmpty) {
