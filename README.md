@@ -1,13 +1,15 @@
 # mdpgroup-frontend-task
 A partial Spotify Clone with a playlist search algorithm
 
+<a href="https://ibb.co/Qb15Qs1"><img src="https://i.ibb.co/r71W0n1/Screenshot-from-2021-04-05-08-30-11.png" alt="App Image" border="0"></a>
+
 ## Insights
 ### Rendering
 In this project, I focused on rendering optimization. I have followed the [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/) to increase the efficiency and maintainability of the application. Further to that, I have used Redux to reduce the number of renders. I have kept track of the renders and I have always thought of the decisions I was making when it comes to create a new component or inject a new service. When I compound the atomic design with a single source of truth, the result was beyond my expectations. None of the components in the tree, including the root, has to render when the API is injected via a service except the deepest children nodes.
 ### Searching and Debounce
 I have optimized `SearchBar` and `PlaylistMenu` by creating them as separate components. This decision reduced the number of renders for `PlaylistWidget`(parent thereof) by half. Unfortunately, the issue was lying deep down in the `SearchBar` component . `onchange` event was triggered too much. And this was causing a state change and some really redundant renders. After thinking about how to solve the problem, I came up with an elegant solution. I have used `throttle` for events like `scroll`. Yet my way has never crossed with `debounce`. I have read a lot about it though. I used `loadash.debounce`. I didn't see any point of writing mine. Integrating it to the React was a little tiring due to the reallocation of function expressions in each render. However, I solved the issue after some effort.
 ### Why is there a Service for the API?
-At the beginning of the app, I set an exact goal. The app could be a small one considering the scope and functionality therein. But I had to create an app that supports nearly an absolute extendibility. I took SOLID into consideration especially while creating a Service for injection. The index does not merely use fetch manually. Instead, it uses `Spotify Service` for sending requests to the server. With this approach, the app became more extendable and less prone to give any error.
+At the beginning of the app, I set an exact goal. The app could be a small one considering the scope and functionality therein. But I had to create an app that supports nearly an absolute extendibility. I took SOLID into consideration especially while creating a Service for injection. `App` does not merely use fetch manually. Instead, it uses `Spotify Service` for sending requests to the server. With this approach, the app became more extendable and less prone to give any error.
 ### A stateless ancestor
 As it is clearly seen, `App` component has no state, neither from Redux nor from hooks. I have used a clever trick there by only getting the API data by services and not using it. This method is not bad when it is known that the API is immutable.
 ### Functional Approach
